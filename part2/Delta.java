@@ -19,4 +19,11 @@ public class Delta extends Seq {
         // String toPrint = "[ " + num + " : " + initial + " &" + delta + " ]";
         return "< " + num + " : " + initial + " &" + delta + " >";
     }
+
+    public int min() {
+        // return initial + ((num-1)*delta);
+        if (num == 0) return 0;
+        else if (delta > 0) return initial;
+        else return initial + (num-1)*delta;
+    }
 }
